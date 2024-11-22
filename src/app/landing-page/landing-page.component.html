@@ -1,16 +1,250 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+<title>VehicleInsurance | Homepage</title>
+<!-- CSS File -->
+<link rel="stylesheet" type="text/css" href="landing-page.component.css" />
+<!--Bootstrap CND-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<!--Fontawesome CND-->
+<link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<!--Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet" />
+
+<!--Animated.css-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+
+<style type="text/css">
+    body {
+        background-color: lavender;
+    }
+
+    * {
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: circularairpro-bold, Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        font-weight: 400;
+    }
+
+    h2 {
+        font-size: 0.9rem;
+        margin: 20px 0 15px 0;
+        font-weight: bold;
+        line-height: 1.1;
+        word-spacing: 4px;
+        font-family: Source Sans Pro;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .navbar {
+        top: 0;
+        width: 100%;
+    }
+
+    .navbar-brand {
+        font-size: 35px !important;
+    }
+
+    .logo {
+        color: red;
+    }
+
+    .navbar-brand i {}
+
+    .animated {
+        animation-duration: 3s;
+        animation-delay: 1s;
+    }
+
+    .heartBeat,
+    .tada {
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .navbar a:hover {
+        color: #fff;
+    }
+
+    .nav-link {
+        font-family: Source Sans Pro;
+        font-weight: lighter;
+    }
+
+    .nav-link::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #fff;
+        transition: width .3s;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+        transition: width .3s;
+    }
+
+    .navbar-toggler {
+        color: #fff !important;
+        outline: none !important;
+    }
+
+    @media(max-width: 991px) {
+        .header {
+            width: 100%;
+            height: 50vh !important;
+        }
+
+        .header h1 {
+            font-size: 30px !important;
+            margin-top: -150px !important;
+        }
+
+        .header h5 {
+            font-size: 16px !important;
+        }
+    }
+
+    .header {
+        height: 100vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+        background-size: cover;
+        background-position: center;
+        padding-top: 40px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .header h1 {
+        padding-top: 250px;
+        padding-bottom: 0;
+        font-size: 55px;
+    }
+
+    /*Footer*/
+    .footer {
+        padding-bottom: 100px 20px;
+        background-color: #000;
+        color: #fff;
+    }
+
+    .footer-logo {
+        width: 130px;
+        margin-bottom: -20px;
+    }
+
+    .footer h4 {
+        text-align: left;
+        margin-top: 57px;
+        margin-bottom: 25px;
+    }
+
+    .footer .row .fa {
+        padding-right: 20px;
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .footer hr {
+        margin-top: 10px;
+        background: #efefef;
+    }
+
+    .footer .copyright {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .footerlink a {
+        text-decoration: none;
+        color: white;
+        transition: 0.6s;
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+    .footerlink a:hover {
+        margin-left: 10px;
+    }
+
+    #myBtn {
+        color: #fff;
+        background: #00abff;
+        padding: 10px;
+        border-radius: 10px;
+        float: right;
+        margin-right: 10%;
+        margin-top: 5%;
+    }
+
+    #myBtn:hover {
+        background: #606060;
+    }
+
+    @media (max-width: 767px) {
+        #myBtn {
+            margin-top: 70%;
+        }
+    }
+</style>
 </head>
 
 <body>
-    <h1>
-        landing Page
-    </h1>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg text-primary fixed-top"
+        style="background-image: linear-gradient(rgba(0,0,0, 0.6),rgba(0,0,0,0));">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" data-toggle="tooltip" title="Home" href="#"><i
+                    class="fa fa-car"></i><span class="logo">Vehicle</span>Insurance</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto animated slideInUp">
+                    <li class="nav-item">
+                        <a class="nav-link active font-weight-bold" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </body>
-
 </html>

@@ -1,1 +1,297 @@
-<p>user-dashboard works!</p>
+<title>VehicleInsurance | Homepage</title>
+<!-- CSS File -->
+<link rel="stylesheet" type="text/css" href="user-dashboard.component.css" />
+<!--Bootstrap CND-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<!--Fontawesome CND-->
+<link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<!--Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet" />
+<!--Animated.css-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+
+<style>
+    body {
+        background-color: lavender;
+    }
+
+    * {
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: circularairpro-bold, Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        font-weight: 400;
+    }
+
+    h2 {
+        font-size: 0.9rem;
+        margin: 20px 0 15px 0;
+        font-weight: bold;
+        line-height: 1.1;
+        word-spacing: 4px;
+        font-family: Source Sans Pro;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .navbar {
+        top: 0;
+        width: 100%;
+    }
+
+    .navbar-brand {
+        font-size: 35px !important;
+    }
+
+    .logo {
+        color: red;
+    }
+
+    .navbar-brand i {}
+
+    .animated {
+        animation-duration: 3s;
+        animation-delay: 1s;
+    }
+
+    .heartBeat,
+    .tada {
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .navbar a:hover {
+        color: #fff;
+    }
+
+    .nav-link {
+        font-family: Source Sans Pro;
+        font-weight: lighter;
+    }
+
+    .nav-link::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #fff;
+        transition: width .3s;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+        transition: width .3s;
+    }
+
+    .navbar-toggler {
+        color: #fff !important;
+        outline: none !important;
+    }
+
+    @media(max-width: 991px) {
+        .header {
+            width: 100%;
+            height: 50vh !important;
+        }
+
+        .header h1 {
+            font-size: 30px !important;
+            margin-top: -150px !important;
+        }
+
+        .header h5 {
+            font-size: 16px !important;
+        }
+    }
+
+    .header {
+        height: 100vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+        background-size: cover;
+        background-position: center;
+        padding-top: 40px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .header h1 {
+        padding-top: 250px;
+        padding-bottom: 0;
+        font-size: 55px;
+    }
+
+    /*Footer*/
+    .footer {
+        padding-bottom: 100px 20px;
+        background-color: #000;
+        color: #fff;
+    }
+
+    .footer-logo {
+        width: 130px;
+        margin-bottom: -20px;
+    }
+
+    .footer h4 {
+        text-align: left;
+        margin-top: 57px;
+        margin-bottom: 25px;
+    }
+
+    .footer .row .fa {
+        padding-right: 20px;
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .footer hr {
+        margin-top: 10px;
+        background: #efefef;
+    }
+
+    .footer .copyright {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .footerlink a {
+        text-decoration: none;
+        color: white;
+        transition: 0.6s;
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+    .footerlink a:hover {
+        margin-left: 10px;
+    }
+
+    #myBtn {
+        color: #fff;
+        background: #00abff;
+        padding: 10px;
+        border-radius: 10px;
+        float: right;
+        margin-right: 10%;
+        margin-top: 5%;
+    }
+
+    #myBtn:hover {
+        background: #606060;
+    }
+
+    @media (max-width: 767px) {
+        #myBtn {
+            margin-top: 70%;
+        }
+    }
+</style>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg text-primary fixed-top"
+        style="background-image: linear-gradient(rgba(0,0,0, 0.6),rgba(0,0,0,0));">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" data-toggle="tooltip" title="Home" href="#"><i
+                    class="fa fa-car"></i><span class="logo">Vehicle</span>Insurance</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto animated slideInUp">
+                    <li class="nav-item">
+                        <a class="nav-link active font-weight-bold" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="aboutus.aspx">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="portfolio.aspx">Insurance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="c.aspx">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="/">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="header">
+        <h1 class="font-weight-bold animated bounceInDown">Welcome to <i class="fa fa-car"></i><span
+                class="logo">Vehicle</span>Insurance </h1>
+        <h5 class="pb-3 font-weight-bold animated bounceInRight">Get the best coverage for your vehicle!</h5>
+        <div class="input-group igp animated bounceInDown">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!--Footer-->
+    <section class="footer">
+        <a id="myBtn" href="#"><i class="fa fa-arrow-up"></i></a>
+        <div class="container">
+            <div class="row footerlink">
+                <div class="col-lg-3 col-md-6 col-12">
+
+                    <p class="m-3"><iframe src="https://maps.google.com/maps?width=50%25&amp;height=400&amp;hl=en&amp;q=TCS%20Olympus%20Building,%20Hiranandani%20Estate,%20Thane+(TCS%20Olympus)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed
+                  ">width="250" height="200" frameborder="0" style="border:0; margin-left: -0px;"
+                            allowfullscreen=""></iframe></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h4>Quick Contact</h4>
+                    <a href="tel:+919324467744"><i class="fa fa-phone-square"></i> +91 9324467744</a><br />
+                    <a href="mailto: sakshikhambaye@gmail.com"><i class="fa fa-envelope"></i>
+                        sakshikhambaye&#64;gmail.com</a><br />
+                    <a
+                        href="https://www.google.com/maps/place/TATA+CONSULTANCY+SERVICES+OLYMPUS,+Hiranandani+Estate,+Thane+West,+Thane,+Maharashtra+400607/data=!4m2!3m1!1s0x3be7bb8b7585c501:0xbd4d2c676a300e7d?sa=X&ved=1t:242&ictx=111"><i
+                            class="fa fa-home"></i>Location </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h4>Follow Us on</h4>
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook-official"></i> Facebook</a><br />
+                    <a href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i> Youtube</a><br />
+                    <a href="https://twitter.com/"><i class="fa fa-twitter-square"></i> Twitter</a>
+                </div>
+            </div>
+            <hr />
+            <p class="copyright m-0">Copyright ©2024 All rights reserved</p>
+        </div>
+    </section>
+</body>

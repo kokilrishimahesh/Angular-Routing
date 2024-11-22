@@ -6,7 +6,7 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 
 export const routes: Routes = [
   { path: '', component: LandingPageComponent }, // Set the default route here
-  { path: 'login', component: LoginPageComponent },
+  { path: 'login', component: LoginPageComponent }, 
   { path: 'signup', component: SignupPageComponent },
   { path: 'user-dashboard', component: UserDashboardComponent }
 ];
